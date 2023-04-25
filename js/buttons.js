@@ -47,6 +47,7 @@ function stopTimer() {
 function outFive() {
   newMinutes = Number(minutesDisplay.innerText) - 5
   if(newMinutes < 0) {
+    newMinutes = Number(minutesDisplay.innerText)
     return
   }
   updateDisplay(newMinutes, 0)

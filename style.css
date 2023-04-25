@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --slider-color: #323238;
+  --clicked-color: #02799D;
+  --button-color: #E1E1E6;
+}
+
+body {
+  background: #FFFFFF;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  place-content: center;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.mode {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+#timer {
+  display: flex;
+}
+
+#timer p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  color: #323238;
+  margin-bottom: 2.4rem;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#buttons {
+  display: flex;
+  gap: 4rem;
+}
+
+#plus:disabled svg path, #minus:disabled svg path {
+  fill: rgb(145, 145, 145);
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.sounds button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  background: var(--button-color);
+  border-radius: 24px;
+}
+
+.sounds input {
+  appearance: none;
+ -webkit-appearance: none;
+  width: 100px;
+  height: 7px;
+  border-radius: 5px;
+  margin-top: 3.2rem;
+  background: var(--slider-color);
+}
+
+.sounds input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--slider-color);
+}
+
+#forestclick input, #forestclick input::-webkit-slider-thumb,
+#rainclick input, #rainclick input::-webkit-slider-thumb,
+#coffeeclick input, #coffeeclick input::-webkit-slider-thumb,
+#fireclick input, #fireclick input::-webkit-slider-thumb {
+  background: white;
+}
+
+#forestclick, #rainclick, #coffeeclick, #fireclick {
+  background: var(--clicked-color);
+}
+
+#forestclick svg path, #rainclick svg path, #coffeeclick svg path, #fireclick svg path {
+  fill: white;
+}
